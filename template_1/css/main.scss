@@ -1,0 +1,125 @@
+// variavles from Bootstrap
+
+// $primary:       $blue !default;
+// $secondary:     $gray-600 !default;
+// $success:       $green !default;
+// $info:          $cyan !default;
+// $warning:       $yellow !default;
+// $danger:        $red !default;
+// $light:         $gray-100 !default;
+// $dark:          $gray-800 !default; font-family: 'Montserrat', sans-serif;
+
+$gray-800 : #111;
+$green : #39b54a;
+$line-height-base:1.857;
+
+$headings-margin-bottom: 3rem;
+$paragraph-margin-bottom: 2rem;
+$body-bg: #f2f2f2;
+$body-color: #111;
+$font-family-base:'Montserrat',
+sans-serif;
+$navbar-brand-font-size: 1.5rem;
+
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500,700&display=swap');
+@import "bootstrap";
+
+[data-scroll] {
+    * {
+        transition: all 1.5s;
+    }
+
+}
+
+[data-scroll="in"] {
+    * {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+[data-scroll="out"] {
+    * {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+}
+
+.w-60 {
+    width: 60px;
+}
+
+nav {
+    .navbar-brand {
+        font-weight: 700;
+    }
+
+}
+
+section {
+    &.main-container {
+        background-attachment: fixed;
+        background-image: url(../images/hero-bg.jpg);
+        background-size: cover;
+        background-position: center center;
+
+        .container {
+            z-index: 1;
+
+            h1 {
+                font-weight: $font-weight-bold;
+
+                small {
+                    font-size: 0.5em;
+                }
+            }
+
+            a.btn.btn-outline-light {
+                border-width: 3px;
+                border-radius: 5px;
+                padding: 0.5rem 1rem;
+            }
+        }
+    }
+
+    &.main-container:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(156, 156, 156, 0.05);
+        z-index: 0;
+    }
+
+    h2.section-heading {
+        font-weight: $font-weight-bold;
+
+        &:after {
+            content: "\2015\2015\2015";
+            color: $green;
+            height: 4px;
+            display: block;
+            margin-top: 15px;
+            line-height: 0;
+            line-break: strict;
+            margin-bottom: 15px;
+        }
+
+    }
+
+    p {
+        @extend .text-secondary;
+    }
+    @media screen and (min-width:600px){
+        &.p-5{
+            padding: 2rem !important;
+        }
+    }
+
+
+}
