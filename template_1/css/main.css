@@ -7474,9 +7474,9 @@ section h2.section-heading:after {
   margin-bottom: 15px;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (max-width: 600px) {
   section.p-5 {
-    padding: 2rem !important;
+    padding: 1rem !important;
   }
 }
 /*# sourceMappingURL=main.css.map */
